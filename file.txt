@@ -1,1 +1,12 @@
-Hello everyone
+What does suynchornous mean?
+Things happening in a sequential manner, one after other, one at a time.
+
+What does ashynchrononus mean?
+Opposite of Sync. , Context switching multiple things.
+
+Best Example:
+Boil Water
+Open Noodles
+Cut Veggies
+Buy Sauces
+
