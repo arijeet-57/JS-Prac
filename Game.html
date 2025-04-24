@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Crash</title>
+    <style>
+        #space {
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+            border: 2px solid black;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .icon {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            bottom: 20px;
+            left:225px;
+            transition: left 0.1s linear;
+        }
+
+        .buttons{
+            width: 505px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+       button{
+        font-size: 40px;
+        cursor: pointer;
+       }
+
+    </style>
+</head>
+<body>
+    <div id="space">
+        <ion-icon class="icon" name="accessibility-outline"></ion-icon>
+    </div>
+    <br>
+    <div class="buttons">
+        <button id="left"><</button>
+        <button id="right">></button>
+    </div>
+
+    <script>
+        let pos = 225;
+        const icon = document.getElementsByClassName('icon')[0];
+        let inetervalId;
+
+        function move(direction) {
+            if (inetervalId) return; //prevents multiple intervals
+            inetervalId = setInterval(() => {
+                if (direction === 'left' && pos > 0) {
+                    pos -= 5;
+                }else if (direction === 'right' && pos < 450) {
+                    pos += 5;
+                }
+                icon.style.left = pos + 'px';
+            }, 20);
+        }
+
+        function stopmoving() {
+            clearInterval(inetervalId);
+            inetervalId = null;
+        }
+
+        const leftbtn = document.getElementById('left');
+        const rightbtn = document.getElementById('right');
+
+
+        leftbtn.onmousedown = () => move('left');
+        rightbtn.onmousedown = () => move('right');
+
+        leftbtn.onmouseup = rightbtn.onmouseup = stopmoving;
+        leftbtn.onmouseleave = rightbtn.onmouseleave = stopmoving;
+
+
+
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

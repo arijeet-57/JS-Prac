@@ -1,0 +1,62 @@
+### **Title: Space Crash - A Simple HTML Game**
+
+---
+
+### **Overview:**
+"Space Crash" is a beginner-friendly browser game that I developed using core web technologies — HTML, CSS, and JavaScript. The idea was to simulate a space-themed movement mechanic where a player controls a rocket icon within a defined space area. The game focuses on responsive, real-time movement using intuitive button controls, laying the groundwork for future enhancements like enemy objects, score tracking, and collision detection.
+
+---
+
+### **Gameplay:**
+In this initial version, the player sees a rocket (represented by an Ionicon) floating in a 500x500 pixel sky-blue space. Two large buttons labeled `<` and `>` are placed below the container. When the player clicks and holds the left or right button, the rocket smoothly glides in the respective direction. The movement stops as soon as the button is released or the mouse pointer exits the button boundary.
+
+---
+
+### **Technology Stack:**
+- **HTML:** For structuring the game elements.
+- **CSS:** Used for styling the container, buttons, and rocket position.
+- **JavaScript:** Powers the movement logic, handling mouse events and updating the rocket's position dynamically.
+- **Ionicons:** Provides the rocket icon and gives the game a sleek, modern look.
+
+---
+
+### **Key Features Implemented:**
+- Real-time press-and-hold movement using `mousedown`, `mouseup`, and `mouseleave` event listeners.
+- Boundaries to restrict the rocket from moving outside the space area.
+- Smooth transition effects with CSS `transition`.
+- Reusable and clean event-handling logic using `addEventListener`.
+
+---
+
+### **Development Journey:**
+This project started as a basic static layout, but I wanted to make it interactive and fun to play. Initially, I implemented a simple click-to-move mechanism. However, I wanted a smoother and more responsive experience — where the movement continues as long as the button is held down.
+
+To achieve that, I took assistance from ChatGPT. Here's a breakdown of how ChatGPT helped me:
+
+- ✅ **Debugging and Fixing Errors**: My initial code had issues like incorrect usage of `getElementsByClassName` and missing CSS units. ChatGPT helped me debug and fix them quickly.
+- ✅ **Implementing Continuous Movement**: ChatGPT guided me in using `setInterval()` combined with mouse event listeners to create the press-and-hold behavior.
+- ✅ **Refactoring Code**: I learned how to clean up my code using `addEventListener` and avoid repetitive logic.
+- ✅ **Best Practices**: I was also advised on smoother transitions, maintaining boundaries, and preparing for further enhancements like keyboard input and collision detection.
+
+---
+
+### **Conclusion:**
+This project helped me understand DOM manipulation, event-driven programming, and layout control in real-world web applications. Although I had a vision for the game, ChatGPT played a major role in turning that vision into a functional project by acting like a real-time mentor.
+
+I plan to evolve "Space Crash" into a more complete game by adding keyboard controls, score tracking, obstacles, and maybe a start screen. This experience has been incredibly insightful and fun, pushing me closer toward mastering the MERN stack and beyond.
+
+---
+
+### **Work Contribution Breakdown:**
+
+- **Arijeet Roy (Hands-on Coding, Learning): 65%**  
+  Arijeet handled the core development, including structuring the game, implementing the movement logic, and learning how to handle DOM events for smooth user interaction.
+
+- **ChatGPT (Debugging, Guidance): 35%**  
+  ChatGPT provided crucial support in debugging, refining logic, and helping Arijeet optimize and clean up the code. It also offered guidance on best practices for event handling and code reusability.
+
+---
+
+**Author:**  
+**Arijeet Roy**
+
